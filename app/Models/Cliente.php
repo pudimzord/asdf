@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cliente extends Model
 {
-    use HasFactory;
+
+    protected $primaryKey = 'idCLiente';
+
+    public function fichas(){
+        return $this->hasMany('app\Models\Ficha');
+    }
 }

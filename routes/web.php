@@ -22,4 +22,5 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Auth::routes();
 
 Route::get('novocliente', [App\Http\Controllers\ClientesController::class, 'index']);
+Route::post('novocliente', [App\Http\Controllers\ClientesController::class, 'criar']);
 
