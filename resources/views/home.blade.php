@@ -31,7 +31,7 @@
                             <td>{{$cliente->nomeCliente}}</td>
                             <td>{{$cliente->emailCliente}}</td>
                             <td>{{$cliente->nomeEmpresaCliente}}</td>
-                            <td><a href="#" class="btn btn-primary btn-sm">Ver</a></td>
+                            <td><a href="/cliente/{{$cliente->idCliente}}" class="btn btn-primary btn-sm">Ver</a></td>
                         </tr>
                     @endforeach
                 </tbody>

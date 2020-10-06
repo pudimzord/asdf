@@ -23,4 +23,5 @@ Auth::routes();
 
 Route::get('novocliente', [App\Http\Controllers\ClientesController::class, 'index']);
 Route::post('novocliente', [App\Http\Controllers\ClientesController::class, 'criar']);
+Route::get('cliente/{id}', [App\Http\Controllers\ClientesController::class, 'ver']);
 
