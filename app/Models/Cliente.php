@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
 
-    protected $primaryKey = 'idCLiente';
+    protected $primaryKey = 'idCliente';
 
     public function fichas(){
         return $this->hasMany('app\Models\Ficha');
