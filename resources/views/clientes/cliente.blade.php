@@ -47,6 +47,7 @@
 
                 </div>
             </div>
+            <a href="{{$infoCliente->idCliente}}/editarcliente">Editar</a>
         </div>
         <div class="col">
 

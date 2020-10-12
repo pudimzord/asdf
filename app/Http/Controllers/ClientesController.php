@@ -43,4 +43,24 @@ class ClientesController extends Controller
 
     }
 
+    public function editar($id){
+        $cliente = Cliente::find($id);
+        return view('clientes.editarcliente', compact('cliente'));
+    }
+
+    public function atualizar(Request $request, $id){
+        // $request->validate([
+
+        // ])
+
+        $cliente= Cliente::find($id);
+        $cliente->nomeCliente = $request->get('nomeCliente');
+        $cliente->emailCliente = $request->get('emailCliente');
+        $cliente->nomeEmpresaCliente = $request->get('nomeEmpresaCliente');
+        $cliente->save();
+
+        return redirect()->route('verCliente', [$cliente]);
+
+    }
+
 }

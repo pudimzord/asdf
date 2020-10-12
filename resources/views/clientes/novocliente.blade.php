@@ -17,7 +17,7 @@
             <input type="text" name="nomeEmpresaCliente" class="form-control">
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
         {{ csrf_field() }}
     </form>
 </div>

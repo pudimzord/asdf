@@ -24,6 +24,8 @@ Auth::routes();
 Route::get('novocliente', [App\Http\Controllers\ClientesController::class, 'index']);
 Route::post('novocliente', [App\Http\Controllers\ClientesController::class, 'criar']);
 Route::get('cliente/{id}', [App\Http\Controllers\ClientesController::class, 'ver'])->name('verCliente');
+Route::get('cliente/{id}/editarcliente', [App\Http\Controllers\ClientesController::class, 'editar']);
+Route::patch('cliente/{id}', [App\Http\Controllers\ClientesController::class, 'atualizar']);
 
 Route::get('cliente/{id}/novoequipamento', [App\Http\Controllers\EquipamentoController::class, 'index']);
 Route::post('cliente/{id}/novoequipamento', [App\Http\Controllers\EquipamentoController::class, 'criar']);
