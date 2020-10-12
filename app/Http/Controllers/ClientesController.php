@@ -38,7 +38,8 @@ class ClientesController extends Controller
     public function ver($id){
 
         $infoCliente = DB::table('clientes')->where('idCliente', $id)->first();
-        return view('clientes.cliente', ['infoCliente'=> $infoCliente]);
+        $fichas = DB::table('fichas')->where('idCliente', $id)->get();
+        return view('clientes.cliente', ['infoCliente'=> $infoCliente, 'fichas' => $fichas] );
 
     }
 
