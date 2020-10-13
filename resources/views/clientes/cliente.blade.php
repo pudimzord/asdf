@@ -47,7 +47,35 @@
 
                 </div>
             </div>
-            <a href="{{$infoCliente->idCliente}}/editarcliente">Editar</a>
+            <div class="mt-2">
+                <a href="{{$infoCliente->idCliente}}/editarcliente" class="btn btn-primary">Editar</a>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                    Eliminar
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Apagar cliente</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Tem a certeza que pretende eliminar este cliente?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary">Apagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         <div class="col">
 
@@ -56,7 +84,7 @@
 
 
 
-                @if (!$fichas->isEmpty())
+            @if (!$fichas->isEmpty())
 
             <table class="table table-striped">
                 <thead>
@@ -89,7 +117,7 @@
             @else
             <p class="mt-5">Sem fichas</p>
 
-         @endif
+            @endif
 
         </div>
     </div>
