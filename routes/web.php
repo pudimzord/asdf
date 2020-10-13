@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Auth::routes();
@@ -26,6 +26,7 @@ Route::post('novocliente', [App\Http\Controllers\ClientesController::class, 'cri
 Route::get('cliente/{id}', [App\Http\Controllers\ClientesController::class, 'ver'])->name('verCliente');
 Route::get('cliente/{id}/editarcliente', [App\Http\Controllers\ClientesController::class, 'editar']);
 Route::patch('cliente/{id}', [App\Http\Controllers\ClientesController::class, 'atualizar']);
+Route::delete('cliente/{id}', [App\Http\Controllers\ClientesController::class, 'atualizar']);
 
 Route::get('cliente/{id}/novoequipamento', [App\Http\Controllers\EquipamentoController::class, 'index']);
 Route::post('cliente/{id}/novoequipamento', [App\Http\Controllers\EquipamentoController::class, 'criar']);

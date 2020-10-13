@@ -63,4 +63,13 @@ class ClientesController extends Controller
 
     }
 
+
+    public function eliminar ($id){
+        $cliente = Cliente::find($id);
+        $cliente->delete();
+
+        return redirect()->route('home');
+        // DB::table('fichas')->where('idCLiente', $id)->delete();
+    }
+
 }
