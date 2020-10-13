@@ -3,4 +3,5 @@
 ##Teste
 <p>App para testar rotas, controladores, base de dados e operações CRUD no Laravel.</p>
 <p>Experimentar a app: <a href="https://aqueous-plains-79379.herokuapp.com/">https://aqueous-plains-79379.herokuapp.com/</a></p>
+<p>Username: admin  | Password: admin</p>
 
